@@ -1,0 +1,16 @@
+{
+  "name": "quran-api",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": "https://github.com/sutanlab/quran-api.git",
+  "author": "Sutan Nasution. <sutan.gnst@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "operate": "node generator.js"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.0"
+  }
+}
