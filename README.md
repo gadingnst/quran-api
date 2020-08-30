@@ -1,0 +1,50 @@
+# Quran - API
+
+## Deployed in: https://api.quran.sutanlab.id
+
+### Introduction
+Quran API with media audio ***Syekh. Mishary Rashid Al-Afasy murrotal***.
+
+### Disclaimer
+This API data source comes from the combination of several parameters from [api.alquran.cloud](https://api.alquran.cloud) by changing its structure for the better use and performance. (Maybe next time, This API has many data source?)
+
+### Features
+- [x] Arabic Transliteration
+- [x] English and Indonesia translation
+- [x] Verses meta (juz, sajda, manzil, etc)
+- [x] Tafsir surahs and verses (for now, only Bahasa Indonesia)
+- [x] Audio (***Syekh. Mishary Rashid Al-Afasy*** murrotal edition)
+- [ ] Your requests ?
+
+### Data Source
+- [api.alquran.cloud](https://api.alquran.cloud) = Quran, Meta Verses, Audio.
+- [quran.kemenag.go.id](https://quran.kemenag.go.id) = Indonesia translations and tafsir verses (short/long).
+- [Al-Quran-ID-API](https://github.com/bachors/Al-Quran-ID-API) = Indonesia tafsir surah [*note: ambiguous revelation type on surah 13 and 55 in this source. So, I changed it to medinan (according to sahih international data)*]
+
+### Endpoint usage
+- [x] `/surah` = Returns the list of surahs in Al-Quran.
+- [x] `/surah/{surah}` = Returns spesific surah. **Example: `/surah/110`**
+- [x] `/surah/{surah}/{ayah}` = Returns spesific ayah with requested surah. **Example: `/surah/2/255`**
+- [ ] Your requests ?
+
+### Recommended fonts for Al-qur'an 
+- [quran.musil.com](http://quran.mursil.com/Web-Print-Publishing-Quran-Text-Graphics-Fonts-and-Downloads/fonts-optimized-for-quran)
+- [Uthmani](https://groups.google.com/forum/#!topic/colteachers/Y6iKganK0tQ)
+
+### Available Commands
+- `yarn start` = run server.
+- `yarn dev` = run develop server.
+- `yarn generate` = collect new data from the data source, then unifying it in one JSON file.
+
+### LICENSE
+MIT
+
+## Support Me
+### Global
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B71P7PB)
+### Indonesia
+- [Trakteer](https://trakteer.id/sutanlab)
+- [Karyakarsa](https://karyakarsa.com/sutanlab)
+
+---
+Copyright © 2020 by Sutan Gading Fadhillah Nasution

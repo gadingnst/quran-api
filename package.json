@@ -1,0 +1,24 @@
+{
+  "name": "quran-api",
+  "version": "1.0.0",
+  "main": "api/server.js",
+  "repository": "https://github.com/sutanlab/quran-api.git",
+  "author": "Sutan Nasution. <sutan.gnst@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "yarn",
+    "start": "node api/server.js",
+    "dev": "nodemon api/server.js",
+    "crawl": "node crawler/script.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
