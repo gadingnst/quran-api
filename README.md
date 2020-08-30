@@ -1,12 +1,11 @@
 # Quran - API
 
+> Quran API with media audio ***Syekh. Mishary Rashid Al-Afasy murrotal***.
+
 ## Deployed in: https://api.quran.sutanlab.id
 
 ### Introduction
-Quran API with media audio ***Syekh. Mishary Rashid Al-Afasy murrotal***.
-
-### Disclaimer
-This API data source comes from the combination of several parameters from [api.alquran.cloud](https://api.alquran.cloud) by changing its structure for the better use and performance. (Maybe next time, This API has many data source?)
+This API data source comes from the combination of several parameters from [api.alquran.cloud](https://api.alquran.cloud) and [quran.kemenag.go.id](https://quran.kemenag.go.id) by merging its data to one JSON file with new structure for the better use and performance. Futhermore, this api uses indexed querying techniques with `0(1)` access time which is greatly affects performance.
 
 ### Features
 - [x] Arabic Transliteration
@@ -34,14 +33,31 @@ This API data source comes from the combination of several parameters from [api.
 ### Available Commands
 - `yarn start` = run server.
 - `yarn dev` = run develop server.
-- `yarn generate` = collect new data from the data source, then unifying it in one JSON file.
+- `yarn crawl` = collect new data from the data source, then unifying it in one JSON file.
+
+### Performance Measurement & Comparison
+
+#### [api.alquran.cloud](https://api.alquran.cloud)
+
+> Fetching on [Surah 7](https://api.alquran.cloud/surah/7/editions/quran-simple-enhanced,ar.alafasy,en.transliteration,en.sahih,id.indonesian) with audio, en translation & transliteration, id translation . Result: ***1200++ ms***
+
+[![api.alquran.cloud](https://raw.githubusercontent.com/sutanlab/quran-api/master/screenshots/api.alquran.cloud.jpeg)](https://raw.githubusercontent.com/sutanlab/quran-api/master/screenshots/api.alquran.cloud.jpeg)
+
+#### [api.quran.sutanlab.id](https://api.quran.sutanlab.id) 
+
+> Fetching on [Surah 7](https://api.quran.sutanlab.id/surah/7) with audio, en translation & transliteration, id translation & tafsir (a lot more data and hosted on free serverless). ***Result: 400++ ms***
+
+[![api.quran.sutanlab.id](https://raw.githubusercontent.com/sutanlab/quran-api/master/screenshots/api.quran.sutanlab.id.jpeg)](https://raw.githubusercontent.com/sutanlab/quran-api/master/screenshots/api.quran.sutanlab.id.jpeg)
+
 
 ### LICENSE
 MIT
 
 ## Support Me
+
 ### Global
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B71P7PB)
+
 ### Indonesia
 - [Trakteer](https://trakteer.id/sutanlab)
 - [Karyakarsa](https://karyakarsa.com/sutanlab)
