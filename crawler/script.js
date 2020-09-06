@@ -52,15 +52,15 @@ const operate = async (surah, tafsirSurah = {}, tryFlag = false) => {
             sequence: parseInt(urut, 10),
             numberOfVerses: arab.numberOfAyahs,
             name: {
-                short: asma,
-                long: arab.name,
+                short: asma.trim(),
+                long: arab.name.trim(),
                 transliteration: {
-                    en: arab.englishName,
-                    id: activeSurah.latin
+                    en: arab.englishName.trim(),
+                    id: activeSurah.latin.trim()
                 },
                 translation: {
-                    en: arab.englishNameTranslation,
-                    id: activeSurah.id
+                    en: arab.englishNameTranslation.trim(),
+                    id: activeSurah.id.trim()
                 }
             },
             revelation: {
@@ -78,12 +78,32 @@ const operate = async (surah, tafsirSurah = {}, tryFlag = false) => {
                     if (surah === 13 || surah === 55) {
                         tafsir = tafsir.replace(/Makkiyyah/gi, 'Madaniyyah')
                     }
-                    return tafsir
+                    return tafsir.trim()
                 })()
+            },
+            preBismillah: arab.number === 1 || arab.number === 9 ? null : {
+                text: {
+                    arab: '%u0628%u0650%u0633%u0652%u0645%u0650 %u0627%u0644%u0644%u0651%u064e%u0647%u0650 %u0627%u0644%u0631%u0651%u064e%u062d%u0652%u0645%u064e%u0670%u0646%u0650 %u0627%u0644%u0631%u0651%u064e%u062d%u0650%u064a%u0645%u0650',
+                    transliteration: {
+                        en: 'Bismillaahir Rahmaanir Raheem'
+                    }
+                },
+                translation: {
+                    en: 'In the name of Allah, the Entirely Merciful, the Especially Merciful.',
+                    id: 'Dengan nama Allah Yang Maha Pengasih, Maha Penyayang.'
+                },
+                audio: {
+                    primary: 'https://cdn.alquran.cloud/media/audio/ayah/ar.alafasy/1',
+                    secondary: [
+                      'https://cdn.islamic.network/quran/audio/128/ar.alafasy/1.mp3',
+                      'https://cdn.islamic.network/quran/audio/64/ar.alafasy/1.mp3'
+                    ]
+                }
             },
             verses: arab.ayahs.map((ayah, idx) => {
                 const activeAyah = temp[`${arab.number}.${ayah.numberInSurah}`]
                 const { tafsir } = activeAyah
+                const arabText = simple.ayahs[idx].text
                 return {
                     number: {
                         inQuran: ayah.number,
@@ -98,23 +118,25 @@ const operate = async (surah, tafsirSurah = {}, tryFlag = false) => {
                         hizbQuarter: ayah.hizbQuarter
                     },
                     text: {
-                        arab: simple.ayahs[idx].text,
+                        arab: arab.number !== 1 && idx === 0
+                            ? arabText.replace(/%u0628%u0650%u0633%u0652%u0645%u0650 %u0627%u0644%u0644%u0651%u064e%u0647%u0650 %u0627%u0644%u0631%u0651%u064e%u062d%u0652%u0645%u064e%u0670%u0646%u0650 %u0627%u0644%u0631%u0651%u064e%u062d%u0650%u064a%u0645%u0650/gi, '').trim()
+                            : arabText.trim(),
                         transliteration: {
-                            en: transliteration.ayahs[idx].text
+                            en: transliteration.ayahs[idx].text.trim()
                         },
+                    },
+                    translation: {
+                        en: english.ayahs[idx].text.trim(),
+                        id: activeAyah.text.id.trim()
                     },
                     audio: {
                         primary: ayah.audio,
                         secondary: ayah.audioSecondary
                     },
-                    translation: {
-                        en: english.ayahs[idx].text,
-                        id: activeAyah.text.id
-                    },
                     tafsir: {
                         id: {
-                            short: tafsir.short,
-                            long: tafsir.long
+                            short: tafsir.short.trim(),
+                            long: tafsir.long.trim()
                         }
                     }
                 }
