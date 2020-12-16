@@ -1,0 +1,2 @@
+FROM heroku/heroku:18
+RUN npm install
