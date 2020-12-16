@@ -3,7 +3,7 @@
 > Quran API with media audio ***Syekh. Mishary Rashid Al-Afasy murrotal***.
 
 ## Deployed in: https://api.quran.sutanlab.id
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://github.com/afrizaloky/quran-api/tree/heroku-deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/afrizaloky/quran-api/tree/heroku-deploy)
 
 ### Introduction
 This API data source comes from the combination of several parameters from [api.alquran.cloud](https://api.alquran.cloud) and [quran.kemenag.go.id](https://quran.kemenag.go.id) by merging its data to one JSON file with new structure for the better use and performance. Futhermore, this api uses indexed querying techniques with `0(1)` access time which is greatly affects performance.
