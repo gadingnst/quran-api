@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const { Router } = require('express')
 const { caching } = require('./middlewares')
 const SurahHandler = require('./handlers/surah')
@@ -12,14 +14,14 @@ router.get('/surah/:surah/:ayah', caching, SurahHandler.getAyahFromSurah)
 // root router
 router.get('/', (req, res) => res.status(200).send({
     surah: {
-        listSurah: 'https://api.quran.sutanlab.id/surah',
+        listSurah: `${process.env.BASE_URL}/surah`,
         spesificSurah: {
-            pattern: 'https://api.quran.sutanlab.id/surah/{surah}',
-            example: 'https://api.quran.sutanlab.id/surah/18'
+            pattern: `${process.env.BASE_URL}/surah/{surah}`,
+            example: `${process.env.BASE_URL}/surah/18`
         },
         spesificAyahInSurah: {
-            pattern: 'https://api.quran.sutanlab.id/surah/{surah}/{ayah}',
-            example: 'https://api.quran.sutanlab.id/surah/18/60'
+            pattern: `${process.env.BASE_URL}/surah/{surah}/{ayah}`,
+            example: `${process.env.BASE_URL}/surah/18/60`
         }
     },
     maintaner: 'Sutan Gading Fadhillah Nasution <sutan.gnst@gmail.com>',

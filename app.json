@@ -1,0 +1,19 @@
+
+{
+  "name": "Quran API",
+  "description": "Quran API with media audio",
+  "repository": "https://github.com/sutanlab/quran-api.git",
+  "stack": "heroku-18",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "BASE_URL": {
+      "description": "Your website URL",
+      "required": true
+    }
+  },
+  "keywords": ["node", "express", "static", "wa", "automate", "bot", "whatsapp", "open-wa", "api"]
+}
