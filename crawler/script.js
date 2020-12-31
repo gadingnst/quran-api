@@ -3,7 +3,8 @@ const fetch = require('node-fetch')
 const { sleep } = require('../helpers')
 const { API_BASEURL, API_BASEURL_2 } = require('./config')
 
-const temp = require('../data/quran-tafsir.json') // source: https://github.com/sutanlab/igbot-ayatdariallah/blob/master/quran-tafsir.json
+// source: https://github.com/sutanlab/igbot-ayatdariallah/blob/master/quran-tafsir.json
+const temp = require('../data/quran-tafsir.json')
 
 const getSurah = surah => {
     const editions = [
@@ -112,10 +113,18 @@ const operate = async (surah, tafsirSurah = {}, tryFlag = false) => {
                     meta: {
                         juz: ayah.juz,
                         page: ayah.page,
-                        sajda: ayah.sajda,
                         manzil: ayah.manzil,
                         ruku: ayah.ruku,
-                        hizbQuarter: ayah.hizbQuarter
+                        hizbQuarter: ayah.hizbQuarter,
+                        sajda: (sajda => {
+                            if (typeof sajda === 'object') {
+                                return {
+                                    recommended: sajda.recommended,
+                                    obligatory: sajda.obligatory
+                                }
+                            }
+                            return { recommended: sajda, obligatory: sajda }
+                        })(ayah.sajda)
                     },
                     text: {
                         arab: arab.number !== 1 && idx === 0
