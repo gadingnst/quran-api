@@ -2,7 +2,9 @@
 
 > Quran API with media audio ***Syekh. Mishary Rashid Al-Afasy murrotal***.
 
-## Deployed in: https://api.quran.sutanlab.id
+## Deployed in: https://api.quran.sutanlab.id 
+#### Try your own!
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fsutanlab%2Fquran-api)
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/afrizaloky/quran-api/tree/heroku-deploy)
 
 ### Introduction
