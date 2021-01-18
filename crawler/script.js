@@ -34,6 +34,11 @@ const getSurah = surah => {
     return action()
 }
 
+const preBismillahHandler = ayah => {
+    const replacer = /[%u0628%u0650%u0633%u0652%u0645%u0650 %u0627%u0644%u0644%u0651%u064e%u0647%u0650 %u0627%u0644%u0631%u0651%u064e%u062d%u0652%u0645%u064e%u0670%u0646%u0650 %u0627%u0644%u0631%u0651%u064e%u062d%u0650%u064a%u0645%u0650,%u0628%u0651%u0650%u0633%u0652%u0645%u0650 %u0627%u0644%u0644%u0651%u064e%u0647%u0650 %u0627%u0644%u0631%u0651%u064e%u062d%u0652%u0645%u064e%u0670%u0646%u0650 %u0627%u0644%u0631%u0651%u064e%u062d%u0650%u064a%u0645%u0650]/gi
+    return ayah.replace(replacer, '').trim()
+}
+
 const operate = async (surah, tafsirSurah = {}, tryFlag = false) => {
     const { asma, keterangan, urut } = tafsirSurah
     try {
@@ -128,7 +133,7 @@ const operate = async (surah, tafsirSurah = {}, tryFlag = false) => {
                     },
                     text: {
                         arab: arab.number !== 1 && idx === 0
-                            ? arabText.replace(/%u0628%u0650%u0633%u0652%u0645%u0650 %u0627%u0644%u0644%u0651%u064e%u0647%u0650 %u0627%u0644%u0631%u0651%u064e%u062d%u0652%u0645%u064e%u0670%u0646%u0650 %u0627%u0644%u0631%u0651%u064e%u062d%u0650%u064a%u0645%u0650/gi, '').trim()
+                            ? preBismillahHandler(arabText)
                             : arabText.trim(),
                         transliteration: {
                             en: transliteration.ayahs[idx].text.trim()
