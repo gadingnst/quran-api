@@ -27,6 +27,7 @@ This API data source comes from the combination of several parameters from [api.
 - [x] `/surah` = Returns the list of surahs in Al-Quran.
 - [x] `/surah/{surah}` = Returns spesific surah. **Example: [/surah/110](https://api.quran.sutanlab.id/surah/110)**
 - [x] `/surah/{surah}/{ayah}` = Returns spesific ayah with requested surah. **Example: [/surah/2/255](https://api.quran.sutanlab.id/surah/2/255)**
+- [x] `/juz/{juz}` = Returns spesific juz with all ayah.
 
 ### Recommended fonts for Al-qur'an 
 - [quran.musil.com](http://quran.mursil.com/Web-Print-Publishing-Quran-Text-Graphics-Fonts-and-Downloads/fonts-optimized-for-quran)
