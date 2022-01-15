@@ -3,6 +3,7 @@ require('dotenv').config()
 const { Router } = require('express')
 const { caching } = require('./middlewares')
 const SurahHandler = require('./handlers/surah')
+const JuzHandler = require('./handlers/juzHandler')
 
 const router = Router()
 
@@ -10,6 +11,9 @@ const router = Router()
 router.get('/surah', caching, SurahHandler.getAllSurah)
 router.get('/surah/:surah', caching, SurahHandler.getSurah)
 router.get('/surah/:surah/:ayah', caching, SurahHandler.getAyahFromSurah)
+
+// juz router
+router.get('/juz/:juz', caching, JuzHandler.getJuz)
 
 // root router
 router.get('/', (req, res) => res.status(200).send({
