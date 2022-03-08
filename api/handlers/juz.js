@@ -1,4 +1,4 @@
-const juzData = require('../lib/juzLib')
+const juzData = require('../lib/juz')
 
 class JuzHandler {
     static getJuz(req, res) {

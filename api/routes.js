@@ -3,7 +3,7 @@ require('dotenv').config()
 const { Router } = require('express')
 const { caching } = require('./middlewares')
 const SurahHandler = require('./handlers/surah')
-const JuzHandler = require('./handlers/juzHandler')
+const JuzHandler = require('./handlers/juz')
 
 const router = Router()
 
@@ -28,7 +28,13 @@ router.get('/', (req, res) => res.status(200).send({
             example: `${process.env.BASE_URL}/surah/18/60`
         }
     },
-    maintaner: 'Sutan Gading Fadhillah Nasution <sutan.gnst@gmail.com>',
+    juz: {
+        spesificJuz: {
+            pattern: `${process.env.BASE_URL}/juz/{juz}`,
+            example: `${process.env.BASE_URL}/juz/30`
+        }
+    },
+    maintaner: 'Sutan Gading Fadhillah Nasution <contact@gading.dev>',
     source: 'https://github.com/sutanlab/quran-api'
 }))
 

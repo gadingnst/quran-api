@@ -34,9 +34,9 @@ This API data source comes from the combination of several parameters from [api.
 - [Uthmani](https://groups.google.com/forum/#!topic/colteachers/Y6iKganK0tQ)
 
 ### Available Commands
-- `yarn start` = run server.
-- `yarn dev` = run develop server.
-- `yarn crawl` = collect new data from the data source, then unifying it in one JSON file.
+- `npm start` = run server.
+- `npm run dev` = run develop server.
+- `npm run crawl` = collect new data from the data source, then unifying it in one JSON file.
 
 ### Performance Measurement & Comparison
 
