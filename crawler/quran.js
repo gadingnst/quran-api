@@ -1,10 +1,16 @@
 const { writeFile } = require('fs').promises
 const fetch = require('node-fetch')
-const { sleep } = require('../helpers')
 const { API_BASEURL, API_BASEURL_2 } = require('./config')
 
 // source: https://github.com/sutanlab/igbot-ayatdariallah/blob/master/quran-tafsir.json
 const temp = require('../data/quran-tafsir.json')
+
+const sleep = async ({ delay = 2000, throwReject = false }) => new Promise((resolve, reject) => {
+    setTimeout(() => {
+        if (throwReject) reject({ timeout: true })
+        else resolve()
+    }, delay)
+})
 
 const getSurah = surah => {
     const editions = [
@@ -105,8 +111,8 @@ const operate = async (surah, tafsirSurah = {}, tryFlag = false) => {
                 audio: {
                     primary: 'https://cdn.alquran.cloud/media/audio/ayah/ar.alafasy/1',
                     secondary: [
-                      'https://cdn.islamic.network/quran/audio/128/ar.alafasy/1.mp3',
-                      'https://cdn.islamic.network/quran/audio/64/ar.alafasy/1.mp3'
+                        'https://cdn.islamic.network/quran/audio/128/ar.alafasy/1.mp3',
+                        'https://cdn.islamic.network/quran/audio/64/ar.alafasy/1.mp3'
                     ]
                 }
             },

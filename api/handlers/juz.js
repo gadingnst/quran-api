@@ -5,11 +5,11 @@ class JuzHandler {
         const { juz } = req.params;
         const data = juzData(parseInt(juz));
 
-        if (juz < 1 || juz > 30) {
+        if (!data) {
             return res.status(404).send({
                 code: 404,
                 status: 'Not Found.',
-                message: `Surah "${surah}" is not found.`,
+                message: `Juz "${juz}" is not found.`,
                 data: {}
             })
         }

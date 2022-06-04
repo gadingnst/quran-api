@@ -10,7 +10,7 @@
     "build": "yarn",
     "start": "node api/server.js",
     "dev": "nodemon api/server.js",
-    "crawl": "node crawler/script.js"
+    "crawl:quran": "node crawler/quran.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -19,6 +19,7 @@
     "node-fetch": "^3.1.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "puppeteer-core": "^13.5.1"
   }
 }
