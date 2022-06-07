@@ -1,7 +1,7 @@
 # Quran - API
 
 ### ❌ This live project will be disabled soon ❌
-Because [Vercel Team](https://vercel.com) notice me that my Hobby Account has reached its limit. I will disable my ***live API*** soon. Please, don't use ***live API*** that hosted in https://api.quran.sutanlab.id for your ***start-up*** or ***commercial*** use. You're better host this porject yourself. Please use my ***live API*** only for ***educational*** or ***personal*** use purpose. Thanks for your attention.
+Because [Vercel Team](https://vercel.com) notice me that my *Hobby Account* has reached its limit. I will disable my ***live API*** soon. Please, don't use ***live API*** that hosted in https://api.quran.sutanlab.id for your ***start-up*** or ***commercial*** use. You're better host this API with yourself. Please only use my ***live API*** for ***educational*** or ***personal*** purpose. Thanks for your attention.
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/38345393/172392200-a5297480-ff57-4300-8360-95e3cc7d271d.png" />
