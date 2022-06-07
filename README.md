@@ -3,10 +3,11 @@
 ### ❌ This live project will be disabled soon ❌
 Because [Vercel Team](https://vercel.com) notice me that my Hobby Account has reached its limit. I will disable my ***live API*** soon. Please, don't use ***live API*** that hosted in https://api.quran.sutanlab.id for your ***start-up*** or ***commercial*** use. You're better host this porject yourself. Please use the my ***live API*** only ***educational*** or ***personal*** use purpose. Thanks for your attention.
 
-<div style="display: flex; justify-content: center; align-items: center">
+<div style="display: flex; justify-content: center; align-items: center; width: 100%">
   <img src="https://user-images.githubusercontent.com/38345393/172392200-a5297480-ff57-4300-8360-95e3cc7d271d.png" />
 </div>
 
+---
 
 > Quran API with media audio ***Syekh. Mishary Rashid Al-Afasy murrotal***.
 
