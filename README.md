@@ -1,8 +1,11 @@
 # Quran - API
 
+### This live project will be disabled soon
+Because [Vercel Team]() notice me that my Hobby Account has reached its limit. I will disabled Live API soon. Please, don't use ***live API*** that hosted in https://api.quran.sutanlab.id for your ***start-up*** or ***commercial*** use. You're better host this porject yourself. Please use the ***live API*** only ***educational*** or ***personal*** use purpose.
+
 > Quran API with media audio ***Syekh. Mishary Rashid Al-Afasy murrotal***.
 
-## Deployed in: https://api.quran.sutanlab.id 
+### Deployed in: https://api.quran.sutanlab.id 
 #### Try your own!
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fsutanlab%2Fquran-api)
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/afrizaloky/quran-api/tree/heroku-deploy)
@@ -52,16 +55,15 @@ This API data source comes from the combination of several parameters from [api.
 
 [![api.quran.sutanlab.id](https://raw.githubusercontent.com/sutanlab/quran-api/master/screenshots/api.quran.sutanlab.id.jpeg)](https://raw.githubusercontent.com/sutanlab/quran-api/master/screenshots/api.quran.sutanlab.id.jpeg)
 
-
 ### LICENSE
 MIT
 
-## Support Me
+### Support Me
 
-### Global
+#### Global
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B71P7PB)
 
-### Indonesia
+#### Indonesia
 - Bank Syariah Mandiri [REK: 7142365973 (SUTAN GADING F NASUTION)]
 - [Trakteer](https://trakteer.id/sutanlab)
 - [Karyakarsa](https://karyakarsa.com/sutanlab)
