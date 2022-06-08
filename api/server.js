@@ -13,21 +13,16 @@ const limiter = rateLimit({
 
 server.use(cors())
 
-server.use(async (req, res, next) => {
-    const clientIp = requestIp.getClientIp(req)
+server.use((req, res, next) => {
     res.setHeader('Cache-Control', 'public, max-age=0, s-maxage=86400, stale-while-revalidate')
-    limiter(10, clientIp)
+    limiter(10, requestIp.getClientIp(req))
         .then(() => next())
-        .catch(() => {
-            res.status(429).send({
-                code: 429,
-                status: 'Too Many Requests',
-                message: 'You have exceeded the rate limit. Try again in a few minutes.',
-                data: {
-                    clientIp
-                }
-            })
-        })
+        .catch(() => res.status(429).send({
+            code: 429,
+            status: 'Too Many Requests',
+            message: 'You have exceeded the rate limit. Try again in a few minutes.',
+            data: {}
+        }))
 })
 
 server.use(express.json())
