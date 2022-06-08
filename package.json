@@ -15,7 +15,8 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "express-rate-limit": "^6.4.0"
+    "lambda-rate-limiter": "^3.0.1",
+    "request-ip": "^2.2.0"
   },
   "devDependencies": {
     "dotenv": "^16.0.1",
