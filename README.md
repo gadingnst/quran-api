@@ -12,7 +12,7 @@ Because [Vercel Team](https://vercel.com) notice me that my *Personal Account* h
   <img src="https://user-images.githubusercontent.com/38345393/172392200-a5297480-ff57-4300-8360-95e3cc7d271d.png" />
 </div>
 
-#### Terms of use my Live API that hosted in https://api.quran.sutanlab.id
+#### Terms of using my Live API that hosted in https://api.quran.sutanlab.id
 - ✅ My ***Live API*** can only be used for ***educational*** or ***personal*** purpose.
 - ⚠️ Please, don't use my ***Live API*** for your ***start-up*** or ***commercial*** purpose. Instead, you're better host this API with yourself, just click the [Deploy button](#deploy-your-own) below or just deploy on your own server. Thanks for your attention.
 
