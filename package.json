@@ -7,18 +7,20 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "yarn",
+    "build": "npm install",
     "start": "node api/server.js",
     "dev": "nodemon api/server.js",
     "crawl": "node crawler/script.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "node-fetch": "^3.1.1"
+    "lambda-rate-limiter": "^3.0.1",
+    "request-ip": "^2.2.0"
   },
   "devDependencies": {
+    "dotenv": "^16.0.1",
+    "node-fetch": "^3.2.5",
     "nodemon": "^2.0.2"
   }
 }
