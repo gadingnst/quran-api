@@ -18,18 +18,18 @@ router.get('/juz/:juz', caching, JuzHandler.getJuz)
 // root router
 router.get('/', (req, res) => res.status(200).send({
     surah: {
-        listSurah: `${process.env.BASE_URL}/surah`,
+        listSurah: '/surah',
         spesificSurah: {
-            pattern: `${process.env.BASE_URL}/surah/{surah}`,
-            example: `${process.env.BASE_URL}/surah/18`
+            pattern: '/surah/{surah}',
+            example: '/surah/18'
         },
         spesificAyahInSurah: {
-            pattern: `${process.env.BASE_URL}/surah/{surah}/{ayah}`,
-            example: `${process.env.BASE_URL}/surah/18/60`
+            pattern: '/surah/{surah}/{ayah}',
+            example: '/surah/18/60'
         }
     },
-    maintaner: 'Sutan Gading Fadhillah Nasution <sutan.gnst@gmail.com>',
-    source: 'https://github.com/sutanlab/quran-api'
+    maintaner: 'Sutan Gading Fadhillah Nasution <contact@gading.dev>',
+    source: 'https://github.com/gadingnst/quran-api'
 }))
 
 // fallback router
