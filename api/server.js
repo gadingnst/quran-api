@@ -15,7 +15,7 @@ server.use(cors())
 
 server.use((req, res, next) => {
     res.setHeader('Cache-Control', 'public, max-age=0, s-maxage=86400, stale-while-revalidate')
-    limiter(10, requestIp.getClientIp(req))
+    limiter(100, requestIp.getClientIp(req))
         .then(() => next())
         .catch(() => res.status(429).send({
             code: 429,
