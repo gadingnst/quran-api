@@ -6,7 +6,7 @@
 > This API has lived at: https://api.quran.sutanlab.id 
 
 #### ❌ Live API will be temporary disabled soon ❌
-Because [Vercel Team](https://vercel.com) notice me that my *Hobby Account* has reached its limit. I will disable my ***live API*** soon. 
+Because [Vercel Team](https://vercel.com) notice me that my *Personal Account* has reached its limit. I will disable my ***Live API*** soon. 
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/38345393/172392200-a5297480-ff57-4300-8360-95e3cc7d271d.png" />
