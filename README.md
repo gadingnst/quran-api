@@ -6,16 +6,16 @@
 
 ### Deployed: https://api.quran.sutanlab.id 
 
-#### ❌ This live project will be disabled soon ❌
+#### ❌ This Live API will be temporary disabled soon ❌
 Because [Vercel Team](https://vercel.com) notice me that my *Hobby Account* has reached its limit. I will disable my ***live API*** soon. 
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/38345393/172392200-a5297480-ff57-4300-8360-95e3cc7d271d.png" />
 </div>
 
-#### ✅ My ***Live API*** that hosted in https://api.quran.sutanlab.id can only be used for ***educational*** or ***personal*** purpose.
+##### ✅ My ***Live API*** that hosted in https://api.quran.sutanlab.id can only be used for ***educational*** or ***personal*** purpose.
 
-#### ⚠️ Please, don't use ***live API*** that hosted in https://api.quran.sutanlab.id for your ***start-up*** or ***commercial*** purpose. If you want to use this API for *commercial purpose*, you're better host this API with yourself, just click the [Deploy button](#deploy-your-own) below. Thanks for your attention.
+##### ⚠️ Please, don't use my ***Live API*** that hosted in https://api.quran.sutanlab.id for your ***start-up*** or ***commercial*** purpose. If you want to use this API for *commercial purpose*, you're better host this API with yourself, just click the [Deploy button](#deploy-your-own) below. Thanks for your attention.
 
 #### Deploy your own!
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fsutanlab%2Fquran-api)
