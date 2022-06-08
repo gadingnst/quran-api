@@ -14,7 +14,7 @@ Because [Vercel Team](https://vercel.com) notice me that my *Personal Account* h
 
 #### Terms of use my Live API that hosted in https://api.quran.sutanlab.id
 - ✅ My ***Live API*** can only be used for ***educational*** or ***personal*** purpose.
-- ⚠️ Please, don't use my ***Live API*** for your ***start-up*** or ***commercial*** purpose. For this purpose, you're better host this API with yourself, just click the [Deploy button](#deploy-your-own) below or just deploy on your own server. Thanks for your attention.
+- ⚠️ Please, don't use my ***Live API*** for your ***start-up*** or ***commercial*** purpose. Instead, you're better host this API with yourself, just click the [Deploy button](#deploy-your-own) below or just deploy on your own server. Thanks for your attention.
 
 #### Deploy your own!
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fsutanlab%2Fquran-api)
