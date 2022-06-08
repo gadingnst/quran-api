@@ -1,7 +1,9 @@
 # Quran - API
 
 ### ❌ This live project will be disabled soon ❌
-Because [Vercel Team](https://vercel.com) notice me that my *Hobby Account* has reached its limit. I will disable my ***live API*** soon. Please, don't use ***live API*** that hosted in https://api.quran.sutanlab.id for your ***start-up*** or ***commercial*** use. You're better host this API with yourself. Please only use my ***live API*** for ***educational*** or ***personal*** purpose. Thanks for your attention.
+Because [Vercel Team](https://vercel.com) notice me that my *Hobby Account* has reached its limit. I will disable my ***live API*** soon. Please, don't use ***live API*** that hosted in https://api.quran.sutanlab.id for your ***start-up*** or ***commercial*** use, you're better host this API with yourself, just click the [Deploy button](#deploy-your-own) below.
+
+So, please only use my ***live API*** for ***educational*** or ***personal*** purpose. Thanks for your attention.
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/38345393/172392200-a5297480-ff57-4300-8360-95e3cc7d271d.png" />
@@ -12,7 +14,7 @@ Because [Vercel Team](https://vercel.com) notice me that my *Hobby Account* has 
 > Quran API with media audio ***Syekh. Mishary Rashid Al-Afasy murrotal***.
 
 ### Deployed in: https://api.quran.sutanlab.id 
-#### Try your own!
+#### Deploy your own!
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fsutanlab%2Fquran-api)
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/afrizaloky/quran-api/tree/heroku-deploy)
 
