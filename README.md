@@ -1,25 +1,26 @@
 # Quran - API
 
----
-
 > Quran API with media audio ***Syekh. Mishary Rashid Al-Afasy murrotal***.
 
-### Deployed: https://api.quran.sutanlab.id 
+### Deployment
+> This API has lived at: https://api.quran.sutanlab.id 
 
-#### ❌ This Live API will be temporary disabled soon ❌
+#### ❌ Live API will be temporary disabled soon ❌
 Because [Vercel Team](https://vercel.com) notice me that my *Hobby Account* has reached its limit. I will disable my ***live API*** soon. 
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/38345393/172392200-a5297480-ff57-4300-8360-95e3cc7d271d.png" />
 </div>
 
-##### ✅ My ***Live API*** that hosted in https://api.quran.sutanlab.id can only be used for ***educational*** or ***personal*** purpose.
-
-##### ⚠️ Please, don't use my ***Live API*** that hosted in https://api.quran.sutanlab.id for your ***start-up*** or ***commercial*** purpose. If you want to use this API for *commercial purpose*, you're better host this API with yourself, just click the [Deploy button](#deploy-your-own) below. Thanks for your attention.
+#### Terms of use my Live API that hosted in https://api.quran.sutanlab.id
+- ✅ My ***Live API*** can only be used for ***educational*** or ***personal*** purpose.
+- ⚠️ Please, don't use my ***Live API*** for your ***start-up*** or ***commercial*** purpose. For this purpose, you're better host this API with yourself, just click the [Deploy button](#deploy-your-own) below or just deploy on your own server. Thanks for your attention.
 
 #### Deploy your own!
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fsutanlab%2Fquran-api)
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/afrizaloky/quran-api/tree/heroku-deploy)
+
+---
 
 ### Introduction
 This API data source comes from the combination of several parameters from [api.alquran.cloud](https://api.alquran.cloud) and [quran.kemenag.go.id](https://quran.kemenag.go.id) by merging its data to one JSON file with new structure for the better use and performance. Futhermore, this api uses indexed querying techniques with `0(1)` access time which is greatly affects performance.
