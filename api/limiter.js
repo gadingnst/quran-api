@@ -37,7 +37,7 @@ if (MONGODB_URI) {
       handler: (req, res) => res.status(503).send({
           code: 503,
           status: 'Service Unavailable',
-          message: 'The server has received too many requests incoming. Try again later.',
+          message: 'The server has received too many incoming requests. Try again later.',
           data
       })
   }))
