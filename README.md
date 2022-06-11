@@ -5,16 +5,11 @@
 ### Deployment
 > This API has lived at: https://api.quran.sutanlab.id 
 
-#### ❌ Live API will be temporary disabled soon ❌
-Because [Vercel Team](https://vercel.com) notice me that my *Personal Account* has reached its limit. I will disable my ***Live API*** soon. 
+#### Terms of using Live API that hosted in https://api.quran.sutanlab.id
+- ✅ This ***Live API*** can only be used for ***educational*** or ***personal*** purpose.
+- ⚠️ Please, don't use this ***Live API*** for your ***start-up*** or ***commercial*** purpose. Instead, you're better host this API with yourself, just click the [Deploy button](#deploy-your-own) below or just deploy on your own server.
 
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/38345393/172392200-a5297480-ff57-4300-8360-95e3cc7d271d.png" />
-</div>
-
-#### Terms of using my Live API that hosted in https://api.quran.sutanlab.id
-- ✅ My ***Live API*** can only be used for ***educational*** or ***personal*** purpose.
-- ⚠️ Please, don't use my ***Live API*** for your ***start-up*** or ***commercial*** purpose. Instead, you're better host this API with yourself, just click the [Deploy button](#deploy-your-own) below or just deploy on your own server. Thanks for your attention.
+> FYI, this ***Live API*** already has a rate limiter of `50req/120min` per **IP**. So, you can't rely on this API for continuous use. But, you can cache the API result into *local/client storage*, and your app doesn't need to request the API frequently. 
 
 #### Deploy your own!
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fsutanlab%2Fquran-api)
