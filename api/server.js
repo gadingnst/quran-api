@@ -18,19 +18,32 @@ server.use(cors())
  * Only on my production server
  * you can probably remove this code
  * if your server won't to have rate limitter API usage
- * in my case, I'll limit it with 50req/120min/IP
+ * in my case, I'll limit it with 10req/30min/address & 120req/30min for the whole server
  * @see https://www.npmjs.com/package/rate-limit-mongo
  */
 if (MONGODB_URI) {
+    const store = new MongoStore({
+        uri: MONGODB_URI,
+        expireTimeMs: 1000 * 60 * 30,
+        errorHandler: console.error.bind(null, 'rate-limit-mongo'),
+        collectionName: 'request-records'
+    })
     server.use(rateLimit({
-        store: new MongoStore({
-            uri: MONGODB_URI,
-            expireTimeMs: 1000 * 60 * 60 * 2,
-            errorHandler: console.error.bind(null, 'rate-limit-mongo'),
-            collectionName: 'request-records'
-        }),
-        max: 50,
-        windowMs: 1000 * 60 * 60 * 2,
+        store,
+        max: 120,
+        windowMs: 1000 * 60 * 30,
+        keyGenerator: () => '__global',
+        message: {
+            code: 429,
+            status: 'Too Many Requests',
+            message: 'The server has too received many requests incoming. Try again in a few minutes.',
+            data: {}
+        }
+    }))
+    server.use(rateLimit({
+        store,
+        max: 10,
+        windowMs: 1000 * 60 * 30,
         message: {
             code: 429,
             status: 'Too Many Requests',
