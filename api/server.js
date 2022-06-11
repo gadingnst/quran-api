@@ -2,12 +2,15 @@ require('dotenv').config()
 
 const express = require('express')
 const cors = require('cors')
-const rateLimit = require('express-rate-limit');
-const MongoStore = require('rate-limit-mongo');
+const rateLimit = require('express-rate-limit')
+const MongoStore = require('rate-limit-mongo')
 const routes = require('./routes')
 
 const port = process.env.PORT || 3000
 const server = express()
+
+server.set('trust proxy', 1)
+server.get('/ip', (request, response) => response.send(request.ip))
 
 server.use(cors())
 
