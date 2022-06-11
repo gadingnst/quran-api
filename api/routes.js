@@ -1,5 +1,3 @@
-require('dotenv').config()
-
 const { Router } = require('express')
 const { caching } = require('./middlewares')
 const SurahHandler = require('./handlers/surah')
