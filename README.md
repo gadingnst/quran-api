@@ -16,7 +16,7 @@
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/afrizaloky/quran-api/tree/heroku-deploy)
 
 #### What is the reason behind I limit the incoming requests in this *Live API*?
-Yeah, I'm glad that this API is known and used by many people, but [Vercel Team](https://vercel.com) noticed that my *Personal Account* has reached its limit. So, that the reason is.
+Yeah, of course I'm glad that this API is known and used by many people. But unfortunately, [Vercel Team](https://vercel.com) noticed that my *Personal Account* has reached its limit. So, that the reason is.
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/38345393/172392200-a5297480-ff57-4300-8360-95e3cc7d271d.png" />
