@@ -1,9 +1,11 @@
 const { writeFile } = require('fs').promises
 const fetch = require('node-fetch')
 const { sleep } = require('../helpers')
-const { API_BASEURL, API_BASEURL_2 } = require('./config')
+const { SOURCE_API_BASEURL, SOURCE_API_BASEURL_2 } = require('../config')
 
-// source: https://github.com/sutanlab/igbot-ayatdariallah/blob/master/quran-tafsir.json
+/**
+ * @see https://github.com/gadingnst/quran.machine/blob/main/src/app/data/quran-tafsir.json
+ */
 const temp = require('../data/quran-tafsir.json')
 
 const getSurah = surah => {
@@ -12,7 +14,7 @@ const getSurah = surah => {
         'en.transliteration', 'en.sahih'
     ]
     
-    const apiUrl = `${API_BASEURL}/surah/${surah}/editions/${editions.join(',')}`
+    const apiUrl = `${SOURCE_API_BASEURL}/surah/${surah}/editions/${editions.join(',')}`
     console.log(`> Prepare surah: ${surah} (${apiUrl})`)
 
     const action = async () => {
@@ -105,8 +107,8 @@ const operate = async (surah, tafsirSurah = {}, tryFlag = false) => {
                 audio: {
                     primary: 'https://cdn.alquran.cloud/media/audio/ayah/ar.alafasy/1',
                     secondary: [
-                      'https://cdn.islamic.network/quran/audio/128/ar.alafasy/1.mp3',
-                      'https://cdn.islamic.network/quran/audio/64/ar.alafasy/1.mp3'
+                        'https://cdn.islamic.network/quran/audio/128/ar.alafasy/1.mp3',
+                        'https://cdn.islamic.network/quran/audio/64/ar.alafasy/1.mp3'
                     ]
                 }
             },
@@ -178,7 +180,7 @@ const operate = async (surah, tafsirSurah = {}, tryFlag = false) => {
 
 async function main() {
     console.log('Fetching all surah...\n')
-    const responseTafsirSurahId = await fetch(API_BASEURL_2)
+    const responseTafsirSurahId = await fetch(SOURCE_API_BASEURL_2)
     const tafsirSurahs = await responseTafsirSurahId.json()
     const response = []
 
