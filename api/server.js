@@ -10,7 +10,6 @@ const port = process.env.PORT || 3000
 const server = express()
 
 server.set('trust proxy', 1)
-server.get('/ip', (request, response) => response.send(request.ip))
 
 server.use(cors())
 
