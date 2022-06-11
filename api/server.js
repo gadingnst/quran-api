@@ -5,6 +5,7 @@ const cors = require('cors')
 const rateLimit = require('express-rate-limit')
 const MongoStore = require('rate-limit-mongo')
 const routes = require('./routes')
+const { MONGODB_URI } = require('../config')
 
 const port = process.env.PORT || 3000
 const server = express()
@@ -20,22 +21,24 @@ server.use(cors())
  * in my case, I'll limit it with 50req/15min
  * @see https://www.npmjs.com/package/rate-limit-mongo
  */
-server.use(rateLimit({
-    store: new MongoStore({
-        uri: process.env.MONGODB_URI,
-        expireTimeMs: 1000 * 60 * 15,
-        errorHandler: console.error.bind(null, 'rate-limit-mongo'),
-        collectionName: 'request-records'
-    }),
-    max: 50,
-    windowMs: 1000 * 60 * 15,
-    message: {
-        code: 429,
-        status: 'Too Many Requests',
-        message: 'You have exceeded the rate limit. Try again in a few minutes.',
-        data: {}
-    }
-}))
+if (MONGODB_URI) {
+    server.use(rateLimit({
+        store: new MongoStore({
+            uri: MONGODB_URI,
+            expireTimeMs: 1000 * 60 * 15,
+            errorHandler: console.error.bind(null, 'rate-limit-mongo'),
+            collectionName: 'request-records'
+        }),
+        max: 50,
+        windowMs: 1000 * 60 * 15,
+        message: {
+            code: 429,
+            status: 'Too Many Requests',
+            message: 'You have exceeded the rate limit. Try again in a few minutes.',
+            data: {}
+        }
+    }))
+}
 
 server.use((req, res, next) => {
     res.setHeader('Cache-Control', 'public, max-age=0, s-maxage=86400, stale-while-revalidate')
