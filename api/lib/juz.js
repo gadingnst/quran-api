@@ -3,6 +3,9 @@ const { data: quran } = require('../../data/quran.json');
 
 const juzData = (_inputJuz) => {
   const inputJuz = juz[_inputJuz - 1];
+
+  if (!inputJuz) return null;
+
   const startSurah = inputJuz.start.index - 1;
   const startAyah = inputJuz.start.verse - 1;
   const endSurah = inputJuz.end.index - 1;
