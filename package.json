@@ -15,9 +15,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
-    "express": "^4.17.1",
-    "express-rate-limit": "^6.4.0",
-    "rate-limit-mongo": "^2.3.2"
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "eslint": "^8.17.0",
