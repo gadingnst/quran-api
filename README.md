@@ -3,13 +3,12 @@
 > Quran API with media audio ***Syekh. Mishary Rashid Al-Afasy murrotal***.
 
 ### Deployment
-> This API has lived at: https://api.quran.sutanlab.id 
+> This API has lived at: https://api.quran.sutanlab.id
 
 #### Terms of using Live API that hosted in https://api.quran.sutanlab.id
-- ✅ This ***Live API*** can only be used for ***educational*** or ***personal*** purpose.
-- ⚠️ Please, don't use this ***Live API*** for your ***start-up*** or ***commercial*** purpose. Instead, you're better host this API with yourself, just click the [Deploy button](#deploy-your-own) below or just deploy on your own server.
+FYI, this ***Live API*** already has a rate limiter of `10req/5min/address` and `150req/5min for the whole server`. So, you can't rely on this ***Live API*** for continuous use. But, you can cache the API result into *local/client storage*, and your app doesn't need to request the API frequently.
 
-> FYI, this ***Live API*** already has a rate limiter of `10req/5min/address` and `150req/5min for the whole server`. So, you can't rely on this API for continuous use. But, you can cache the API result into *local/client storage*, and your app doesn't need to request the API frequently. 
+On the other side, it's ***highly recommended*** to deploy this API with yourself, just click the [Deploy button](#deploy-your-own) below, or clone this repository and deploy it wherever cloud/server you want.
 
 #### Deploy your own!
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fsutanlab%2Fquran-api)
@@ -46,7 +45,7 @@ This API data source comes from the combination of several parameters from [api.
 - [x] `/surah/{surah}/{ayah}` = Returns spesific ayah with requested surah. **Example: [/surah/2/255](https://api.quran.sutanlab.id/surah/2/255)**
 - [x] `/juz/{juz}` = Returns spesific juz with all ayah.**Example: [/juz/2](https://api.quran.sutanlab.id/juz/2)**
 
-### Recommended fonts for Al-qur'an 
+### Recommended fonts for Al-qur'an
 - [quran.musil.com](http://quran.mursil.com/Web-Print-Publishing-Quran-Text-Graphics-Fonts-and-Downloads/fonts-optimized-for-quran)
 - [Uthmani](https://groups.google.com/forum/#!topic/colteachers/Y6iKganK0tQ)
 
@@ -63,7 +62,7 @@ This API data source comes from the combination of several parameters from [api.
 
 [![api.alquran.cloud](https://raw.githubusercontent.com/sutanlab/quran-api/master/screenshots/api.alquran.cloud.jpeg)](https://raw.githubusercontent.com/sutanlab/quran-api/master/screenshots/api.alquran.cloud.jpeg)
 
-#### [api.quran.sutanlab.id](https://api.quran.sutanlab.id) 
+#### [api.quran.sutanlab.id](https://api.quran.sutanlab.id)
 
 > Fetching on [Surah 7](https://api.quran.sutanlab.id/surah/7) with audio, en translation & transliteration, id translation & tafsir (a lot more data and hosted on free serverless). ***Result: 400++ ms***
 
