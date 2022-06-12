@@ -20,6 +20,7 @@
     "rate-limit-mongo": "^2.3.2"
   },
   "devDependencies": {
+    "eslint": "^8.17.0",
     "node-fetch": "^3.2.5",
     "nodemon": "^2.0.2"
   }
