@@ -9,7 +9,7 @@
 - ✅ This ***Live API*** can only be used for ***educational*** or ***personal*** purpose.
 - ⚠️ Please, don't use this ***Live API*** for your ***start-up*** or ***commercial*** purpose. Instead, you're better host this API with yourself, just click the [Deploy button](#deploy-your-own) below or just deploy on your own server.
 
-> FYI, this ***Live API*** already has a rate limiter of `10req/30min/address` and `120req/30min for the whole server`. So, you can't rely on this API for continuous use. But, you can cache the API result into *local/client storage*, and your app doesn't need to request the API frequently. 
+> FYI, this ***Live API*** already has a rate limiter of `10req/5min/address` and `150req/5min for the whole server`. So, you can't rely on this API for continuous use. But, you can cache the API result into *local/client storage*, and your app doesn't need to request the API frequently. 
 
 #### Deploy your own!
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fsutanlab%2Fquran-api)
