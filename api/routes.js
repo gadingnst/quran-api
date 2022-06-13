@@ -12,7 +12,6 @@ router.use((req, res, next) => {
   next();
 });
 
-/* whitelist rate-limiter */
 router.get('/', (req, res) => res.status(200).send({
   surah: {
     listSurah: '/surah',
@@ -34,8 +33,8 @@ router.get('/', (req, res) => res.status(200).send({
 }));
 
 router.get('/surah', caching, SurahHandler.getAllSurah);
-/* whitelist rate-limiter */
 
+/* will apply rate limiter in belo routes */
 router.use(limiter);
 
 router.get('/surah/:surah', caching, SurahHandler.getSurah);
