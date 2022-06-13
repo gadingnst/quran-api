@@ -33,11 +33,8 @@ router.get('/', (req, res) => res.status(200).send({
 
 router.get('/surah', caching, SurahHandler.getAllSurah);
 
-// surah router
 router.get('/surah/:surah', caching, SurahHandler.getSurah);
 router.get('/surah/:surah/:ayah', caching, SurahHandler.getAyahFromSurah);
-
-// juz router
 router.get('/juz/:juz', caching, JuzHandler.getJuz);
 
 // fallback router
