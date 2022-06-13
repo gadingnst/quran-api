@@ -38,11 +38,8 @@ router.get('/surah', caching, SurahHandler.getAllSurah);
 
 router.use(limiter);
 
-// surah router
 router.get('/surah/:surah', caching, SurahHandler.getSurah);
 router.get('/surah/:surah/:ayah', caching, SurahHandler.getAyahFromSurah);
-
-// juz router
 router.get('/juz/:juz', caching, JuzHandler.getJuz);
 
 // fallback router
