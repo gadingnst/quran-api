@@ -1,16 +1,18 @@
 const { Router } = require('express');
 
 const { caching } = require('./middlewares');
+const limiter = require('./lib/limiter');
 const SurahHandler = require('./handlers/surah');
 const JuzHandler = require('./handlers/juz');
 
 const router = Router();
 
 router.use((req, res, next) => {
-  res.setHeader('Cache-Control', 'public, max-age=0, s-maxage=86400, stale-while-revalidate');
+  res.setHeader('Cache-Control', 'max-age=0, s-maxage=86400, stale-while-revalidate');
   next();
 });
 
+/* whitelist rate-limiter */
 router.get('/', (req, res) => res.status(200).send({
   surah: {
     listSurah: '/surah',
@@ -32,6 +34,9 @@ router.get('/', (req, res) => res.status(200).send({
 }));
 
 router.get('/surah', caching, SurahHandler.getAllSurah);
+/* whitelist rate-limiter */
+
+router.use(limiter);
 
 // surah router
 router.get('/surah/:surah', caching, SurahHandler.getSurah);
