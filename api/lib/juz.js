@@ -40,6 +40,7 @@ const juzData = (_inputJuz) => {
     'juzEndSurahNumber': inputJuz.end.index,
     'juzStartInfo': `${startSurahName} - ${inputJuz.start.verse}`,
     'juzEndInfo': `${endSurahName} - ${inputJuz.end.verse}`,
+    'totalVerses': juzAyah.length,
     'verses': juzAyah
   };
   return data;
