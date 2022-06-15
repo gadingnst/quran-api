@@ -10,7 +10,6 @@ const juzData = (_inputJuz) => {
   const startAyah = inputJuz.start.verse - 1;
   const endSurah = inputJuz.end.index - 1;
   const endAyah = inputJuz.end.verse;
-
   let juzAyah, _firstSurah, _middle,
     _middleSurah, _lastSurah;
 
@@ -37,8 +36,10 @@ const juzData = (_inputJuz) => {
   const endSurahName = quran[endSurah].name.transliteration.id;
   const data = {
     'juz': _inputJuz,
-    'start': `${startSurahName} - ${inputJuz.start.verse}`,
-    'end': `${endSurahName} - ${inputJuz.end.verse}`,
+    'juzStartSurahNumber': inputJuz.start.index,
+    'juzEndSurahNumber': inputJuz.end.index,
+    'juzStartInfo': `${startSurahName} - ${inputJuz.start.verse}`,
+    'juzEndInfo': `${endSurahName} - ${inputJuz.end.verse}`,
     'verses': juzAyah
   };
   return data;
