@@ -3,9 +3,9 @@
 > Quran API with media audio ***Syekh. Mishary Rashid Al-Afasy murrotal***.
 
 ### Deployment
-> This API has lived at: https://api.quran.sutanlab.id
+> This API has lived at: https://api.quran.gading.dev
 
-#### Terms of using Live API that hosted in https://api.quran.sutanlab.id
+#### Terms of using Live API that hosted in https://api.quran.gading.dev
 FYI, this ***Live API*** already has a rate limiter of `10req/5min/address` and `150req/5min for the whole server`. So, you can't rely on this ***Live API*** for continuous use. But, you can cache the API result into *local/client storage*, and your app doesn't need to request the API frequently.
 
 On the other side, it's ***highly recommended*** to deploy this API with yourself, just click the [Deploy button](#deploy-your-own) below, or clone this repository and deploy it wherever cloud/server you want.
@@ -41,9 +41,9 @@ This API data source comes from the combination of several parameters from [api.
 
 ### Endpoint usage
 - [x] `/surah` = Returns the list of surahs in Al-Quran.
-- [x] `/surah/{surah}` = Returns spesific surah. **Example: [/surah/110](https://api.quran.sutanlab.id/surah/110)**
-- [x] `/surah/{surah}/{ayah}` = Returns spesific ayah with requested surah. **Example: [/surah/2/255](https://api.quran.sutanlab.id/surah/2/255)**
-- [x] `/juz/{juz}` = Returns spesific juz with all ayah.**Example: [/juz/2](https://api.quran.sutanlab.id/juz/2)**
+- [x] `/surah/{surah}` = Returns spesific surah. **Example: [/surah/110](https://api.quran.gading.dev/surah/110)**
+- [x] `/surah/{surah}/{ayah}` = Returns spesific ayah with requested surah. **Example: [/surah/2/255](https://api.quran.gading.dev/surah/2/255)**
+- [x] `/juz/{juz}` = Returns spesific juz with all ayah.**Example: [/juz/2](https://api.quran.gading.dev/juz/2)**
 
 ### Recommended fonts for Al-qur'an
 - [quran.musil.com](http://quran.mursil.com/Web-Print-Publishing-Quran-Text-Graphics-Fonts-and-Downloads/fonts-optimized-for-quran)
@@ -62,11 +62,11 @@ This API data source comes from the combination of several parameters from [api.
 
 [![api.alquran.cloud](https://raw.githubusercontent.com/sutanlab/quran-api/master/screenshots/api.alquran.cloud.jpeg)](https://raw.githubusercontent.com/sutanlab/quran-api/master/screenshots/api.alquran.cloud.jpeg)
 
-#### [api.quran.sutanlab.id](https://api.quran.sutanlab.id)
+#### [api.quran.gading.dev](https://api.quran.gading.dev)
 
-> Fetching on [Surah 7](https://api.quran.sutanlab.id/surah/7) with audio, en translation & transliteration, id translation & tafsir (a lot more data and hosted on free serverless). ***Result: 400++ ms***
+> Fetching on [Surah 7](https://api.quran.gading.dev/surah/7) with audio, en translation & transliteration, id translation & tafsir (a lot more data and hosted on free serverless). ***Result: 400++ ms***
 
-[![api.quran.sutanlab.id](https://raw.githubusercontent.com/sutanlab/quran-api/master/screenshots/api.quran.sutanlab.id.jpeg)](https://raw.githubusercontent.com/sutanlab/quran-api/master/screenshots/api.quran.sutanlab.id.jpeg)
+[![api.quran.gading.dev](https://raw.githubusercontent.com/sutanlab/quran-api/master/screenshots/api.quran.sutanlab.id.jpeg)](https://raw.githubusercontent.com/sutanlab/quran-api/master/screenshots/api.quran.sutanlab.id.jpeg)
 
 ### LICENSE
 MIT
