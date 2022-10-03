@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 const { writeFile } = require('fs').promises;
-const fetch = require('node-fetch');
+const fetch = require('isomorphic-fetch');
 const { sleep } = require('./helpers');
 const { SOURCE_API_BASEURL, SOURCE_API_BASEURL_2 } = require('../config');
 
@@ -106,9 +106,8 @@ const operate = async(surah, tafsirSurah = {}, tryFlag = false) => {
           id: 'Dengan nama Allah Yang Maha Pengasih, Maha Penyayang.'
         },
         audio: {
-          primary: 'https://cdn.alquran.cloud/media/audio/ayah/ar.alafasy/1',
+          primary: 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/1.mp3',
           secondary: [
-            'https://cdn.islamic.network/quran/audio/128/ar.alafasy/1.mp3',
             'https://cdn.islamic.network/quran/audio/64/ar.alafasy/1.mp3'
           ]
         }
@@ -123,6 +122,7 @@ const operate = async(surah, tafsirSurah = {}, tryFlag = false) => {
             inSurah: ayah.numberInSurah
           },
           meta: {
+            surahNumber: arab.number,
             juz: ayah.juz,
             page: ayah.page,
             manzil: ayah.manzil,
