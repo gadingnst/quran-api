@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "eslint": "^8.17.0",
-    "node-fetch": "^3.2.5",
+    "isomorphic-fetch": "^3.0.0",
     "nodemon": "^2.0.2"
   }
 }
