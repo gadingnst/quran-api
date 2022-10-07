@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 const { writeFile } = require('fs').promises;
-const fetch = require('node-fetch');
+const fetch = require('isomorphic-fetch');
 const { sleep } = require('./helpers');
 const { SOURCE_API_BASEURL, SOURCE_API_BASEURL_2 } = require('../config');
 
