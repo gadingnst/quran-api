@@ -20,6 +20,6 @@
   "devDependencies": {
     "eslint": "^8.17.0",
     "isomorphic-fetch": "^3.0.0",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.20"
   }
 }
