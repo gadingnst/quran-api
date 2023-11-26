@@ -10,7 +10,7 @@ class JuzHandler {
         code: 404,
         status: 'Not Found.',
         message: `Juz "${juz}" is not found.`,
-        data: {}
+        data: null
       });
     }
 
