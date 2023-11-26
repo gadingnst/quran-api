@@ -31,7 +31,7 @@ class SurahHandler {
       code: 404,
       status: 'Not Found.',
       message: `Surah "${surah}" is not found.`,
-      data: {}
+      data: null
     });
   }
 
@@ -43,7 +43,7 @@ class SurahHandler {
         code: 404,
         status: 'Not Found.',
         message: `Surah "${surah}" is not found.`,
-        data: {}
+        data: null
       });
     }
     const checkAyah = checkSurah.verses[ayah - 1];
@@ -52,7 +52,7 @@ class SurahHandler {
         code: 404,
         status: 'Not Found.',
         message: `Ayah "${ayah}" in surah "${surah}" is not found.`,
-        data: {}
+        data: null
       });
     }
 
