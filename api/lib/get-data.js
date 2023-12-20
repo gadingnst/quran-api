@@ -1,6 +1,6 @@
-const { data: juz } = require("../../data/juz.json");
-const { data: page } = require("../../data/page.json");
-const { data: quran } = require("../../data/quran.json");
+const { data: juz } = require('../../data/juz.json');
+const { data: page } = require('../../data/page.json');
+const { data: quran } = require('../../data/quran.json');
 
 /**
  * Retrieves data based on the input and mode.
@@ -11,7 +11,7 @@ const { data: quran } = require("../../data/quran.json");
  * @returns {Object|null} - The data object containing the retrieved data, or null if no data is found.
  */
 const getData = ({ input, mode }) => {
-  const inputData = mode === "juz" ? juz[input - 1] : page[input - 1];
+  const inputData = mode === 'juz' ? juz[input - 1] : page[input - 1];
 
   if (!inputData) return null;
 
@@ -49,7 +49,7 @@ const getData = ({ input, mode }) => {
     [`${mode}StartInfo`]: `${startSurahName} - ${inputData.start.verse}`,
     [`${mode}EndInfo`]: `${endSurahName} - ${inputData.end.verse}`,
     totalVerses: ayah.length,
-    verses: ayah,
+    verses: ayah
   };
   return data;
 };

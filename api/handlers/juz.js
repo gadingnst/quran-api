@@ -1,24 +1,24 @@
-const getData = require("../lib/get-data");
+const getData = require('../lib/get-data');
 
 class JuzHandler {
   static getJuz(req, res) {
     const { juz } = req.params;
-    const data = getData({ input: parseInt(juz), mode: "juz" });
+    const data = getData({ input: parseInt(juz), mode: 'juz' });
 
     if (!data) {
       return res.status(404).send({
         code: 404,
-        status: "Not Found.",
+        status: 'Not Found.',
         message: `Juz "${juz}" is not found.`,
-        data: {},
+        data: {}
       });
     }
 
     return res.status(200).send({
       code: 200,
-      status: "OK.",
-      message: "Success fetching juz.",
-      data,
+      status: 'OK.',
+      message: 'Success fetching juz.',
+      data
     });
   }
 }
