@@ -3,6 +3,7 @@ const { Router } = require('express');
 const { caching } = require('./middlewares');
 const SurahHandler = require('./handlers/surah');
 const JuzHandler = require('./handlers/juz');
+const PageHandler = require('./handlers/page');
 
 const router = Router();
 
@@ -25,6 +26,10 @@ router.get('/', (req, res) => res.status(200).send({
     spesificJuz: {
       pattern: '/juz/{juz}',
       example: '/juz/30'
+    },
+    spesificPage: {
+      pattern: '/page/{page}',
+      example: '/page/252'
     }
   },
   maintaner: 'Sutan Gading Fadhillah Nasution <contact@gading.dev>',
@@ -36,6 +41,7 @@ router.get('/surah', caching, SurahHandler.getAllSurah);
 router.get('/surah/:surah', caching, SurahHandler.getSurah);
 router.get('/surah/:surah/:ayah', caching, SurahHandler.getAyahFromSurah);
 router.get('/juz/:juz', caching, JuzHandler.getJuz);
+router.get('/page/:page', caching, PageHandler.getPage);
 
 // fallback router
 router.all('*', (req, res) => res.status(404).send({
