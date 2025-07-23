@@ -34,6 +34,22 @@ This API data source comes from the combination of several parameters from [api.
 - [x] Audio (***Syekh. Mishary Rashid Al-Afasy*** murrotal edition)
 - [ ] Your requests ?
 
+### Crawl Quran data on local machine
+If you want to crawl new quran data on your local machine (after clone this repo, and install depedency with `npm/yarn`), do following steps:
+
+1. Download `quran-tafsir.json` file (download [here](https://github.com/gadingnst/quran.machine/blob/main/src/app/data/quran-tafsir.json) ) and save it on `'data'` folder.
+2. Configure `.env.example` file , rename it to `.env`.
+3. Configure the base url (on your `.env` file).
+
+```
+# Data Source Endpoint for Crawler (NOT USED IN PRODUCTION)
+SOURCE_API_BASEURL=http://api.alquran.cloud/v1
+SOURCE_API_BASEURL_2=https://api.npoint.io/99c279bb173a6e28359c/data
+```
+
+3. Done, run the crawl command. (`npm run crawl` or `yarn run crawl`).
+
+
 ### Data Source
 - [api.alquran.cloud](https://api.alquran.cloud) = Quran, Meta Verses, Audio.
 - [quran.kemenag.go.id](https://quran.kemenag.go.id) = Indonesia translations and tafsir verses (short/long).
