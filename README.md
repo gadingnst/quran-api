@@ -77,9 +77,9 @@ MIT
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B71P7PB)
 
 #### Indonesia
-- Bank Syariah Mandiri [REK: 7142365973 (SUTAN GADING F NASUTION)]
-- [Trakteer](https://trakteer.id/sutanlab)
-- [Karyakarsa](https://karyakarsa.com/sutanlab)
+- [Yapp](https://yapp.ink/gading)
+- [Trakteer](https://trakteer.id/gadingnst)
+- [Karyakarsa](https://karyakarsa.com/gadingnst)
 
 ---
 Copyright © 2020 by Sutan Gading Fadhillah Nasution
